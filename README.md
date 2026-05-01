@@ -1,16 +1,6 @@
-# React + Vite
+# Работа с базой данных
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Вся работа с базой данных реализована с помощью библиотек pg, db-migration.
+Возможности создания (команда npx db-migrate up) и удаления (команда npx db-migrate down) таблицы находится в папке migrations/sqls.
+Создание pool, который бы выполнял запросы к БД, происходит в файле /src/api/db/database.js.
+Работа с бд происходит в API.js в пути /api/auth/register
